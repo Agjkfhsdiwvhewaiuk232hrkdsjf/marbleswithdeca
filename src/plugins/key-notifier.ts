@@ -37,11 +37,16 @@ class KeyNotifier {
             return;
         }
         (this.bot.channels.get("472323387851669519") as Discord.TextChannel)
-        .send(`${name} opened by ${opener} in ${server.name}`)
+        .send({
+            "embed": {
+              "title": (`${name}`),
+              "description": (`${server.name}`),
+              "color": 16763981,
+              "footer": {
+              }
+            }
+          })
         .then((msg: Discord.Message) => {
-            setTimeout(() => {
-                msg.edit(`${msg.content} is about to close!`);
-            }, 25000);
             setTimeout(() => {
                 msg.delete();
             }, 30000);
