@@ -7,8 +7,9 @@ import { ResourceManager } from './../core/resource-manager';
 import { PlayerTracker } from './player-tracker';
 import { HelloPacket } from '../networking/packets/outgoing/hello-packet';
 import { IPoint } from '../services/pathfinding/point';
-import { IHeapItem } from '../services/pathfinding/heap-item';
+import { IServer } from './../models/server';
 import Discord = require('discord.js');
+import { IHeapItem } from '../services/pathfinding/heap-item';
 
 const fs = require("fs");
 
@@ -49,12 +50,12 @@ class RealmTrack {
         });
         process.on('unhandledRejection', (reason, p) => {
             Log('Unhandled Rejection', 'at: ' + p + ' reason: ' + reason);
-        });
+        });     
         PluginManager.afterInit(() => {
             let portalList: Portal[] = new Array();
             this.playerTracker = PluginManager.getInstanceOf(PlayerTracker);
             this.playerTracker.trackAllPlayers();
-            this.playerTracker.on('leave', player => {
+            this.playerTracker.on('leave', (player: IPlayerData) => {       
                 if (config.blacklistedMembers.find((name: any) => name == player.name) != null) return;
                 if (config.blacklistedGuilds.find((name: any) => name == player.guildName) != null) return;
 
@@ -68,12 +69,12 @@ class RealmTrack {
                 let py: number = player.worldPos.y;
 
                 /* ------------------ BAZAAR ------------------ */
-                if (py < 135 && py > 131) {
-                    if (px < 142 && px > 138) bazSide = 0;
-                    if (px < 180 && px > 176) bazSide = 1;
-                } else if (py < 139 && py > 127) {
-                    if (px < 148 && px > 138) bazSide = 2;
-                    if (px < 180 && px > 170) bazSide = 3;
+                if (py < 166 && py > 162) {
+                    if (px < 90 && px > 86) bazSide = 0;
+                    if (px < 128 && px > 124) bazSide = 1;
+                } else if (py < 170 && py > 158) {
+                    if (px < 96 && px > 86) bazSide = 2;
+                    if (px < 128 && px > 118) bazSide = 3;
                 }
 
                 let side: string = '';
@@ -95,11 +96,11 @@ class RealmTrack {
                                     .find((name: any) => name == player.name)), 1);
                             }, 90000);
                         }
-                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' - ' + side + ' Bazaar - ' + items + ' - ' + shortServer);
+                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel)    
+                        .send(player.name + ' - ' + side + ' Bazaar - ' +  items + ' - ' + shortServer); 
                     } else if (trackedPlayer != null) {
-                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' - ' + side + ' Bazaar - ' + shortServer);
+                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel) 
+                        .send(player.name + ' - ' + side + ' Bazaar' + ' - ' + shortServer);
                     }
                     items = null;
                     trackedPlayer = null;
@@ -112,18 +113,18 @@ class RealmTrack {
                 let locName: string = '';
 
                 if (locName == '') {
-                    if (py > 134 && py < 137) {
-                        if (px > 161 && px < 164) locName = 'Vault';
-                        if (px > 154 && px < 157) locName = 'Guild Hall';
+                    if (py > 165 && py < 168) {
+                        if (px > 109 && px < 112) locName = 'Vault';
+                        if (px > 102 && px < 105) locName = 'Guild Hall';
                     }
-                    if (px > 161 && px < 164 && py > 129 && py < 131) locName = 'Pet Yard';
-                    if (px > 164 && px < 167 && py > 118 && py < 121) locName = 'Daily Quest Room';
-                    if (px > 131 && px < 134 && py > 99 && py < 101) locName = 'the Arena';
+                    if (px > 109 && px < 112 && py > 160 && py < 162) locName = 'Pet Yard';
+                    if (px > 112 && px < 115 && py > 144 && py < 147) locName = 'Daily Quest Room';
+                    if (px > 78 && px < 82 && py > 129 && py < 133) locName = 'the Arena';
                 }
 
                 if (locName != '' && trackedPlayer != null) {
-                    (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                    .send(player.name + ' - ' + locName + ' - ' +  shortServer);
+                    (this.bot.channels.get('472323417421643777') as Discord.TextChannel) 
+                    .send(player.name + ' - ' + locName + ' - ' + shortServer);
                     items = null;
                     trackedPlayer = null;
                 }
@@ -141,7 +142,7 @@ class RealmTrack {
                         && py < portal.y + 2);
                     if (portal != null) {
                         (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' - ' + portal.name + ' - ' + items + ' - ' +  shortServer);
+                        .send(player.name + ' - ' + portal.name + ' - ' + items + ' - ' + shortServer);
                         items = null;
                         trackedPlayer = null;
                     }
@@ -152,8 +153,8 @@ class RealmTrack {
                         && py > portal.y - 2
                         && py < portal.y + 2);
                     if (portal != null) {
-                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' - ' + portal.name + ' - ' +  shortServer);
+                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel) 
+                        .send(player.name + ' - ' + portal.name + ' - ' + shortServer);
                         trackedPlayer = null;
                     }
                     portal = null;
@@ -168,8 +169,8 @@ class RealmTrack {
                         && py < +x[1] + 2
                         && shortServer == x[3]);
                     if (realmPos != null) {
-                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' - ' + realmPos[2] + ' - ' + items + ' - ' +  shortServer);
+                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel) 
+                        .send(player.name + ' - ' + realmPos[2] + ' - ' + items + ' - ' + shortServer);
                         realmPos = null;
                         trackedPlayer = null;
                     }
@@ -181,8 +182,8 @@ class RealmTrack {
                         && py < +x[1] + 2
                         && shortServer == x[3]);
                     if (realmPos != null) {
-                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' (' + Math.round(player.currentFame / 1000 * 10) / 10 + 'k BF)' + ' - ' + realmPos[2] + ' - ' +  shortServer);
+                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel) 
+                        .send(player.name + ' (' + Math.round(player.currentFame / 1000 * 10) / 10 + 'k BF)' + ' - ' + realmPos[2] + ' - ' + shortServer);
                         realmPos = null;
                         trackedPlayer = null;
                     }
@@ -194,8 +195,8 @@ class RealmTrack {
                         && py < +x[1] + 2
                         && shortServer == x[3]);
                     if (realmPos != null) {
-                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' - ' + realmPos[2] + ' - ' +  shortServer);
+                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel) 
+                        .send(player.name + ' - ' + realmPos[2] + ' - ' + shortServer);
                         realmPos = null;
                         trackedPlayer = null;
                     }
@@ -220,8 +221,8 @@ class RealmTrack {
                 let items = this.getItemsOf(player.inventory, [{ num: 583, item: 'Vial of Pure Darkness', event: false },
                                                                      { num: 2991, item: 'Lost Halls Key', event: false }]);
                 if (items != '') {
-                    (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                    .send(player.name + ' - ' + items + ' - ' +  this.getSrv(player.server));
+                    (this.bot.channels.get('472323417421643777') as Discord.TextChannel) 
+                    .send(player.name + ' - ' + items + ' - ' + this.getSrv(player.server));
                     items = null;
                     return;
                 }
@@ -230,8 +231,8 @@ class RealmTrack {
                 if (trackedPlayer != null) {
                     let type: String = (trackedPlayer.type == ' ' ?
                         '' : trackedPlayer.type);
-                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' - ' + type + ' - ' +  this.getSrv(player.server))
+                        (this.bot.channels.get('472323417421643777') as Discord.TextChannel) 
+                        .send(player.name + ' - ' + type + ' - ' + this.getSrv(player.server))
                     type = null;
                 }
                 trackedPlayer = null;
@@ -273,15 +274,15 @@ class RealmTrack {
         obj = null;
     }
 
-    private loop(cli: Client, initial: Boolean): void {
+private loop(cli: Client, initial: Boolean): void {
         if (initial)
-            setTimeout(() => this.loop(cli, false), 17500);
+            setTimeout(() => this.loop(cli, false), 17100);
         else {
-            cli.findPath({ x: 159, y: 102 });
+            cli.findPath({ x: 107, y: 136 });
             setTimeout(() => {
-                cli.findPath({ x: 157, y: 123 });
+                cli.findPath({ x: 107, y: 157 });
                 setTimeout(() => this.loop(cli, false), 90000);
-            }, 15000);
+            }, 11000);
         }
     }
 
