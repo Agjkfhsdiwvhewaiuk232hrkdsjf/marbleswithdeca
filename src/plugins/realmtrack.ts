@@ -99,7 +99,7 @@ class RealmTrack {
                         .send(player.name + ' - ' + side + ' Bazaar - ' + items + ' - ' + shortServer);
                     } else if (trackedPlayer != null) {
                         (this.bot.channels.get('472323417421643777') as Discord.TextChannel)
-                        .send(player.name + ' - ' + side + ' Bazaar' + ' - ' + shortServer);
+                        .send(player.name + ' - ' + side + ' Bazaar - ' + shortServer);
                     }
                     items = null;
                     trackedPlayer = null;
