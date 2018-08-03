@@ -41,7 +41,7 @@ class KeyNotifier {
             "embed": {
               "title": (`@${name}`),
               "description": (`${server.name}`),
-              "color": (`#00FFFF`),
+              "color": 65535,
               "footer": {
               }
             }
