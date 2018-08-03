@@ -2,7 +2,7 @@ import { Log, LogLevel, NrPlugin, HookPacket, Packet, PacketType, Client, Plugin
 import { TextPacket } from './../networking/packets/incoming/text-packet';
 import { IServer } from './../models/server';
 import Discord = require('discord.js');
-
+var roleids = {"Shaitan's Portal" : "474909516052430898", "Mad God Mayhem" : "474909515708497931", "The Shatters" : "474909482124574732"}
 const PORTAL_REGEX = /^{"key":"server.dungeon_opened_by","tokens":{"dungeon":"(\S.*)", "name":"(\w+)"}}$/;
 const embed = new Discord.RichEmbed()
 @NrPlugin({
@@ -37,7 +37,7 @@ class KeyNotifier {
             return;
         }
         (this.bot.channels.get("472323387851669519") as Discord.TextChannel)
-        .send( `@${name}` + {           
+        .send( `$role[name]` + {           
             "embed": {
               "title": (`${name}`),
               "description": (`**${server.name}**`),
