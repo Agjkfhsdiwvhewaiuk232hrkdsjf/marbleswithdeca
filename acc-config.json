@@ -1,0 +1,167 @@
+
+{
+    "buildVersion": "X28.0.1",
+    "accounts": [
+        {
+            "alias": "Main Client",
+            "guid": "adwareadwers+0@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USWest3",
+        "host": "96.27.26.132",
+        "port": 10200,
+        "type": 4            	
+        },
+        {
+            "alias": "Secondary Client",
+            "guid": "adwareadwers+1@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USWest",
+        "host": "111.253.81.3",
+        "port": 1080,
+        "type": 5            	
+        },
+        {
+            "alias": "Third Client",
+            "guid": "adwareadwers+2@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USSouthWest",
+        "host": "46.23.202.52",
+        "port": 39880,
+        "type": 5            	
+        },	
+        {
+            "alias": "Fourth Client",
+            "guid": "adwareadwers+3@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USSouth3",
+        "host": "125.231.133.145",
+        "port": 1080,
+        "type": 5            	
+        },	
+        {
+            "alias": "Fifth Client",
+            "guid": "adwareadwers+4@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USSouth2",
+        "host": "87.251.88.159",
+        "port": 8080,
+        "type": 5            	
+        },	
+        {
+            "alias": "Sixth Client",
+            "guid": "adwareadwers+5@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USSouth",
+        "host": "124.11.174.52",
+        "port": 1080,
+        "type": 5            	
+        },	
+        {
+            "alias": "Seventh Client",
+            "guid": "adwareadwers+6@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USNorthWest",
+        "host": "94.177.241.183",
+        "port": 10080,
+        "type": 5            	
+        },	
+        {
+            "alias": "Eight Client",
+            "guid": "adwareadwers+7@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USMidWest2",
+        "host": "47.100.97.233",
+        "port": 9999,
+        "type": 5            	
+        },	
+        {
+            "alias": "Ninth Client",
+            "guid": "adwareadwers+8@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USMidWest",
+        "host": "58.20.41.172",
+        "port": 1080,
+        "type": 5            	
+        },	
+        {
+            "alias": "Tenth Client",
+            "guid": "adwareadwers+9@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USEast3",
+        "host": "125.231.124.142",
+        "port": 1080,
+        "type": 5            	
+        },	        {
+            "alias": "Eleventh Client",
+            "guid": "adwareadwers+10@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "USEast",
+        "host": "223.241.214.44",
+        "port": 1217,
+        "type": 5            		                  	
+        },
+        {
+            "alias": "Twelvth Client",
+            "guid": "adwareadwers+11@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "EUWest2",
+        "host": "31.148.219.150",
+        "port": 1443,
+        "type": 5            	
+        },	
+        {
+            "alias": "Thirteenth client",
+            "guid": "adwareadwers+12@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "EUWest",
+        "host": "34.207.196.193",
+        "port": 9050,
+        "type": 5            	
+        },	
+        {
+            "alias": "Fourteenth Client",
+            "guid": "adwareadwers+13@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "EUSouthWest",
+        "host": "122.118.218.154",
+        "port": 10080,
+        "type": 5            	
+        },	
+        {
+            "alias": "Fifteenth Client",
+            "guid": "adwareadwers+14@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "EUSouth",
+        "host": "103.216.82.205",
+        "port": 6667,
+        "type": 5            	
+        },	
+        {
+            "alias": "Sixteehnth Client",
+            "guid": "adwareadwers+15@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "EUNorth2",
+        "host": "103.87.171.109",
+        "port": 47443,
+        "type": 5            	
+        },	
+        {
+            "alias": "Seventeenth Client",
+            "guid": "adwareadwers+16@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "EUNorth",
+        "host": "220.136.1.220",
+        "port": 1080,
+        "type": 5            	
+        },	
+        {
+            "alias": "Eighteenth Client",
+            "guid": "adwareadwers+17@gmail.com",
+            "password": "anjamarko123",
+            "serverPref": "EUEast",
+        "host": "132.148.26.185",
+        "port": 10080,
+        "type": 5            	
+        }		
+    ]
+}

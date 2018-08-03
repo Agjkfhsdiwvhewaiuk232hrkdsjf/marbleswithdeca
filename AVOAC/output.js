@@ -1,0 +1,21 @@
+//BEGINNING OF NEW SAVE
+'adwareadwers+0@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+1@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+2@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+3@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+4@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+5@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+6@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+7@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+8@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+9@gmail.com': 'anjamarko123', //Zhiar
+'adwareadwers+10@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+11@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+12@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+13@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+14@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+15@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+16@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+17@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+18@gmail.com': 'anjamarko123', //Drac
+'adwareadwers+19@gmail.com': 'anjamarko123', //Drac

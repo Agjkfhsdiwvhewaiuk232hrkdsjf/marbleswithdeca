@@ -1,0 +1,41 @@
+{
+  "name": "nrelay",
+  "version": "6.20.0",
+  "description": "A console based modular client for Realm of the Mad God built with Node.js and TypeScript.",
+  "main": "index.js",
+  "bin": {
+    "nrelay": "./index.js"
+  },
+  "scripts": {
+    "build": "gulp",
+    "start": "gulp && node index",
+    "index": "tsai --path src --exclude plugins updater-assets"
+  },
+  "author": "thomas-crane",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomas-crane/nrelay"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.28",
+    "@types/node-rsa": "^0.4.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.2.3",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^2.2.0",
+    "tsai": "^2.0.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "@types/gulp": "^4.0.5",
+    "bufferutil": "^4.0.0",
+    "chalk": "^2.3.0",
+    "discord.js": "^11.3.2",
+    "gulp-cli": "^2.0.1",
+    "node-rsa": "^0.4.2",
+    "socks": "^2.1.2"
+  }
+}
