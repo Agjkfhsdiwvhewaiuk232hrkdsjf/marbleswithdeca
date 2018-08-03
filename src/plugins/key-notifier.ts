@@ -4,7 +4,7 @@ import { IServer } from './../models/server';
 import Discord = require('discord.js');
 
 const PORTAL_REGEX = /^{"key":"server.dungeon_opened_by","tokens":{"dungeon":"(\S.*)", "name":"(\w+)"}}$/;
-
+const embed = new Discord.RichEmbed()
 @NrPlugin({
     name: 'Key Notifier',
     author: 'Lolization',
@@ -37,10 +37,10 @@ class KeyNotifier {
             return;
         }
         (this.bot.channels.get("472323387851669519") as Discord.TextChannel)
-        .send({
+        .send( `@${name}` + {           
             "embed": {
-              "title": (`@${name}`),
-              "description": (`${server.name}`),
+              "title": (`${name}`),
+              "description": (`**${server.name}**`),
               "color": 65535,
               "footer": {
               }
