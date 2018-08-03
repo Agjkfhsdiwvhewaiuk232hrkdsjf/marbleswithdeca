@@ -39,9 +39,9 @@ class KeyNotifier {
         (this.bot.channels.get("472323387851669519") as Discord.TextChannel)
         .send({
             "embed": {
-              "title": (`${name}`),
+              "title": (`@${name}`),
               "description": (`${server.name}`),
-              "color": 16763981,
+              "color": (`#00FFFF`),
               "footer": {
               }
             }
