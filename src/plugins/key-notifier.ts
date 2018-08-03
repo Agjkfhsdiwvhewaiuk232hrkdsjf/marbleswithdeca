@@ -37,7 +37,7 @@ class KeyNotifier {
             return;
         }
         (this.bot.channels.get("472323387851669519") as Discord.TextChannel)
-        .send("Dungeon just popped!" + {           
+        .send({      
             "embed": {
               "title": (`${name}`),
               "description": (`**${server.name}**`),
