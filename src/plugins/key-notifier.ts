@@ -4,7 +4,8 @@ import { IServer } from './../models/server';
 import Discord = require('discord.js');
 const bot = new Discord.Client();
 let ping = bot.guilds.get("472322827530403841").roles.find("name", name);
-var roleids = {"Shaitan's Portal" : "474909516052430898", "Mad God Mayhem" : "474909515708497931", "The Shatters" : "474909482124574732"}
+console.log(ping.id)
+console.log(name)
 const PORTAL_REGEX = /^{"key":"server.dungeon_opened_by","tokens":{"dungeon":"(\S.*)", "name":"(\w+)"}}$/;
 const embed = new Discord.RichEmbed()
 @NrPlugin({
