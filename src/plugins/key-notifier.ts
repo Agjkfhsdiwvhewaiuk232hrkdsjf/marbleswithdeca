@@ -40,7 +40,7 @@ class KeyNotifier {
             return;
         }
         (this.bot.channels.get("472323387851669519") as Discord.TextChannel)
-        .send( ping, {      
+        .send( "<@&" + ping + ">" + {      
             "embed": {
               "title": (`${name}`),
               "description": (`**${server.name}**`),
