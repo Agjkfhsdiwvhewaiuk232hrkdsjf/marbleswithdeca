@@ -3,7 +3,6 @@ import { TextPacket } from './../networking/packets/incoming/text-packet';
 import { IServer } from './../models/server';
 import Discord = require('discord.js');
 const bot = new Discord.Client();
-let ping = bot.guilds.get("472322827530403841").roles.find("name", name);
 console.log(ping.id)
 console.log(name)
 const PORTAL_REGEX = /^{"key":"server.dungeon_opened_by","tokens":{"dungeon":"(\S.*)", "name":"(\w+)"}}$/;
@@ -39,6 +38,7 @@ class KeyNotifier {
         if (!this.ready) {
             return;
         }
+        let ping = bot.guilds.get("472322827530403841").roles.find("name", name);        
         (this.bot.channels.get("472323387851669519") as Discord.TextChannel)
         .send( "<@&" + ping + ">" + {      
             "embed": {
