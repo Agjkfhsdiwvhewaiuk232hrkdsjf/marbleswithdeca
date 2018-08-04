@@ -42,7 +42,7 @@
         },
         {
             "name": "Sadfahlsdj",
-            "type": "LHZ"
+            "type": "LHZ/Shatters"
         },	
         {
             "name": "StaffPlays",
@@ -190,7 +190,7 @@
         },	
         {
             "name": "MrSpikeyZ",
-            "type": "PubHalls"
+            "type": "PubHalls/Shatters"
         },	
         {
             "name": "AgeOfTerra",
@@ -218,7 +218,7 @@
         },	
         {
             "name": "Illdienow",
-            "type": "PubHalls"
+            "type": "PubHalls/Shatters"
         },	
         {
             "name": "Lanisaide",
@@ -230,15 +230,15 @@
         },	
         {
             "name": "OtakuZach",
-            "type": "PubHalls"
+            "type": "PubHalls/Shatters"
         },	
         {
             "name": "Potsaccbg",
-            "type": "PubHalls"
+            "type": "PubHalls/Shatters"
         },	
         {
             "name": "RandomeLoL",
-            "type": "PubHalls"
+            "type": "PubHalls/Shatters"
         },	
         {
             "name": "IvyLin",
@@ -246,7 +246,7 @@
         },	
         {
             "name": "Fourtunate",
-            "type": "PubHalls"
+            "type": "PubHalls/Shatters"
         },			
         {
             "name": "RedDragoni",
@@ -254,18 +254,10 @@
         },		
         {
             "name": "Shengkia",
-            "type": "PubHalls"
+            "type": "PubHalls/shatters"
         },
         {
             "name": "CFlare",
-            "type": "PubHalls"
-        },
-        {
-            "name": "Shengkia",
-            "type": "PubHalls"
-        },
-        {
-            "name": "Shengkia",
             "type": "PubHalls"
         },		
         {
@@ -569,11 +561,7 @@
             "type": "SBC"
         },			
         {
-            "name": "Briceblbl",
-            "type": "Shatters"
-        },	
-        {
-            "name": "Pyroscout",
+            "name": "Nitta",
             "type": "Shatters"
         },	
         {
@@ -581,9 +569,49 @@
             "type": "Shatters/PubHalls"
         },	
         {
-            "name": "Ultizero",
+            "name": "OGHazsa",
             "type": "Shatters"
         },
+        {
+            "name": "Murderall",
+            "type": "Shatters"
+        },
+        {
+            "name": "Briceblbl",
+            "type": "Shatters"
+        },
+        {
+            "name": "Pyroscout",
+            "type": "Shatters"
+        },
+        {
+            "name": "Downdraft",
+            "type": "Shatters"
+        },
+        {
+            "name": "IronRain",
+            "type": "Shatters"
+        },
+        {
+            "name": "Lavabot",
+            "type": "Shatters"
+        },
+        {
+            "name": "Seanova",
+            "type": "Shatters"
+        },
+        {
+            "name": "Vipervent",
+            "type": "Shatters"
+        },		
+        {
+            "name": "VoidShade",
+            "type": "Shatters"
+        },		
+        {
+            "name": "Yuziah",
+            "type": "Shatters"
+        },					
         {
             "name": "Maekker",
             "type": "LostBoys"
