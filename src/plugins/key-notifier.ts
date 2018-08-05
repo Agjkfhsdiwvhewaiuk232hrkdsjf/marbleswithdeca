@@ -36,7 +36,7 @@ class KeyNotifier {
         if (!this.ready) {
             return;
         }
-        let ping = bot.guilds.get("472322827530403841").roles.find("name", name);  
+        let ping = this.bot.guilds.get("472322827530403841").roles.find("name", name);
         console.log(name);
         console.log(ping.id);    
         (this.bot.channels.get("472323387851669519") as Discord.TextChannel)
