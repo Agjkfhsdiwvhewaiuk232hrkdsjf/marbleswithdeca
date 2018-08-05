@@ -49,11 +49,6 @@ class KeyNotifier {
               }
             }
           })
-        .then((msg: Discord.Message) => {
-            setTimeout(() => {
-                msg.delete();
-            }, 30000);
-        })
         .catch((error: Error) => {
             Log('Key Notifier', 'An error occurred while sending the message to discord.', LogLevel.Warning);
             Log('Discord Error', error.message, LogLevel.Error);
